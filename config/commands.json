@@ -1,0 +1,54 @@
+{
+    "commands": [
+        {
+            "name": "cache",
+            "aliases": "c",
+            "class": "ride\\cli\\command\\CacheCommand"
+        },
+        {
+            "name": "cache enable",
+            "aliases": "ce",
+            "class": "ride\\cli\\command\\CacheEnableCommand"
+        },
+        {
+            "name": "cache disable",
+            "aliases": "cd",
+            "class": "ride\\cli\\command\\CacheDisableCommand"
+        },
+        {
+            "name": "cache clear",
+            "aliases": "cc",
+            "class": "ride\\cli\\command\\CacheClearCommand"
+        },
+        {
+            "name": "dependency",
+            "aliases": ["d", "dep"],
+            "class": "ride\\cli\\command\\DependencySearchCommand"
+        },
+        {
+            "name": "file",
+            "aliases": "f",
+            "class": "ride\\cli\\command\\FileSearchCommand"
+        },
+        {
+            "name": "parameter",
+            "aliases": "p",
+            "class": "ride\\cli\\command\\ParameterSearchCommand"
+        },
+        {
+            "name": "parameter get",
+            "aliases": "pg",
+            "class": "ride\\cli\\command\\ParameterGetCommand"
+        },
+        {
+            "name": "parameter set",
+            "aliases": "ps",
+            "class": "ride\\cli\\command\\ParameterSetCommand"
+        },
+        {
+            "name": "parameter unset",
+            "aliases": "pu",
+            "class": "ride\\cli\\command\\ParameterUnsetCommand"
+        }
+    ]
+}
