@@ -25,7 +25,7 @@ class CacheCommand extends AbstractCommand {
         ksort($controls);
 
         foreach ($controls as $name => $control) {
-            $this->output->writeLine('[' . ($control->isEnabled() ? 'X' : ' ') . '] ' . $name . (!$control->canToggle() ? ' (locked)' : ''));
+            $this->output->writeLine('[' . ($control->isEnabled() ? 'V' : ' ') . '] ' . $name . (!$control->canToggle() ? ' (locked)' : ''));
         }
     }
 
