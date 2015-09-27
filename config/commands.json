@@ -21,6 +21,11 @@
             "class": "ride\\cli\\command\\CacheClearCommand"
         },
         {
+            "name": "cache warm",
+            "aliases": "cw",
+            "class": "ride\\cli\\command\\CacheWarmCommand"
+        },
+        {
             "name": "dependency",
             "aliases": ["d", "dep"],
             "class": "ride\\cli\\command\\DependencySearchCommand"
