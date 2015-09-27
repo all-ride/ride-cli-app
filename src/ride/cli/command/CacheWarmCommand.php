@@ -3,19 +3,19 @@
 namespace ride\cli\command;
 
 /**
- * Command to clear the cache
+ * Command to warm the cache
  */
-class CacheClearCommand extends AbstractCommand {
+class CacheWarmCommand extends AbstractCommand {
 
     /**
      * Initializes the command
      * @return null
      */
     protected function initialize() {
-        $this->setDescription('Clears the cache');
+        $this->setDescription('Warms up the cache');
 
-        $this->addArgument('name', 'Name of the cache to clear', false);
-        $this->addFlag('skip', 'Name of the caches, separated by a comma, to skip when clearing');
+        $this->addArgument('name', 'Name of the cache to warm', false);
+        $this->addFlag('skip', 'Name of the caches, separated by a comma, to skip when warming');
     }
 
     /**
@@ -27,7 +27,7 @@ class CacheClearCommand extends AbstractCommand {
     public function invoke($name = null, $skip = null) {
         if ($name) {
             $control = $this->dependencyInjector->get('ride\\library\\cache\\control\\CacheControl', $name);
-            $control->clear();
+            $control->warm();
 
             return;
         }
@@ -40,7 +40,7 @@ class CacheClearCommand extends AbstractCommand {
                 continue;
             }
 
-            $control->clear();
+            $control->warm();
         }
     }
 

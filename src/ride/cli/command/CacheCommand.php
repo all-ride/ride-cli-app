@@ -20,7 +20,7 @@ class CacheCommand extends AbstractCommand {
      * @return null
      */
     public function invoke() {
-        $controls = $this->dependencyInjector->getAll('ride\\application\\cache\\control\\CacheControl');
+        $controls = $this->dependencyInjector->getAll('ride\\library\\cache\\control\\CacheControl');
 
         ksort($controls);
 
