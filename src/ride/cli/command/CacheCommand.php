@@ -12,7 +12,7 @@ class CacheCommand extends AbstractCommand {
      * @return null
      */
     protected function initialize() {
-        $this->setDescription('Gets an overview of the caches');
+        $this->setDescription('Show an overview of the caches');
     }
 
     /**
