@@ -12,7 +12,7 @@ class CacheEnableCommand extends AbstractCommand {
      * @return null
      */
     protected function initialize() {
-        $this->setDescription('Enables the cache');
+        $this->setDescription('Enables all caches or a specific cache if provided');
 
         $this->addArgument('name', 'Name of the cache to enable', false);
     }

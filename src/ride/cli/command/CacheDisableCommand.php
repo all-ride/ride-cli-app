@@ -12,7 +12,7 @@ class CacheDisableCommand extends AbstractCommand {
      * @return null
      */
     protected function initialize() {
-        $this->setDescription('Disables the cache');
+        $this->setDescription('Disables all caches or a specific cache if provided');
 
         $this->addArgument('name', 'Name of the cache to disable', false);
     }
