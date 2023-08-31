@@ -29,7 +29,7 @@ class DependencySearchCommand extends AbstractCommand {
         // filter the dependencies on the search query
         if ($query) {
             foreach ($dependencies as $interface => $null) {
-                if (stripos($interface, $query) !== false) {
+                if (stripos((string) $interface, $query) !== false) {
                     continue;
                 }
 
@@ -53,7 +53,7 @@ class DependencySearchCommand extends AbstractCommand {
 
                 $this->output->writeLine($tab . '#' . $id . ' ' . $dependency->getClassName());
 
-                $padding = $tab . str_repeat(' ', strlen($id) + 2);
+                $padding = $tab . str_repeat(' ', strlen((string) $id) + 2);
                 $argumentPadding = $padding . $tab;
 
                 $constructor = $dependency->getConstructorArguments();

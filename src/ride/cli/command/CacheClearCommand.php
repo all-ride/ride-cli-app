@@ -32,11 +32,14 @@ class CacheClearCommand extends AbstractCommand {
             return;
         }
 
-        $skip = explode(',', $skip);
+        if ($skip) {
+            $skip = explode(',', $skip);
+        }
 
         $controls = $this->dependencyInjector->getAll('ride\\library\\cache\\control\\CacheControl');
-        foreach ($controls as $name => $control) {
-            if (in_array($name, $skip)) {
+
+        foreach ($controls as $value => $control) {
+            if (in_array($value, $skip)) {
                 continue;
             }
 
