@@ -38,7 +38,7 @@ class CacheWarmCommand extends AbstractCommand {
 
         $controls = $this->dependencyInjector->getAll('ride\\library\\cache\\control\\CacheControl');
         foreach ($controls as $value => $control) {
-            if (in_array($value, $skip)) {
+            if ($skip && in_array($value, $skip)) {
                 continue;
             }
 
